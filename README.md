@@ -34,13 +34,13 @@ In the script I used the range operator `..` to define consecutive numbers:
 ```Powershell
 (16..29)
 ```
-and combined them to the rest of the list using the `+` operator:
-```Powershell
-$profileIDs = (11, 13) + (16..29)
-```
 This is equivalent to
 ```Powershell
 $profileIDs = (11, 13, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29)
+```
+And combined them to the rest of the list using the `+` operator:
+```Powershell
+$profileIDs = (11, 13) + (16..29)
 ```
 
 ## Executing a Powershell command defined in a variable
