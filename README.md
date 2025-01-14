@@ -18,7 +18,7 @@ I need the full path the executable since it wans't added to the <i>Path</i> env
 
 For each of the profiles I want to open, I added their identifier , `x`, into a list called `profileIDs`:
 ```Powershell
-$profileIDs = @(11, 13, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29)
+$profileIDs = (11, 13) + (16..29)
 ```
 
 ### Loop
@@ -28,6 +28,17 @@ foreach ($i in $profileIDs) {
     & $CHROME_EXE "google.com" --profile-directory="Profile $i"
 }
 ```
+
+### The range operator
+In the script I used the range operator `..` to define consecutive numbers:
+```Powershell
+(16..29)
+```
+and combined them to the rest of the list using the `+` operator:
+```Powershell
+$profileIDs = (11, 13) + (16..29)
+```
+
 ## Executing a Powershell command defined in a variable
 In the script, the full path to the chrome executable is contained in a variable called `$CHROME_EXE`. <br>
 In order to treat the variable as a command, you must use the `&` operator:
