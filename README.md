@@ -6,7 +6,7 @@ In Google Chrome, each profile you create has a local directory named `Profile x
 Thus, there's no mapping between a profile's name (visible in the Crhome UI) and its directory. <br>
 In order to know the path of a profile's directory on the local drive, open the profile and go to <a>chrome://version</a>, and look for a <b>Profile Path</b>. See the picture below.
 
-![profile path from chrome://version](./profile_path.jpg)
+![profile path from chrome://version](./profile_path1.jpg)
 
 # The Script itself
 ### Variables
